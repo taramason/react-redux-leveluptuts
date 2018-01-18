@@ -39,13 +39,13 @@ const greeting = (state = defaultState, action) => {
   }
 };
 
-const store = createStore(greeting);
+const store = createStore(greeting); //must have a store defined
 
 console.log (store.getState()); //using default state name as stated in greeting
 
 const name = 'Taraaarra';
 
-store.dispatch ({
+store.dispatch ({ //telling the store what to spit out (will use something else later)
   type: 'GREET_NAME',
   name //using name assigned above
 })
